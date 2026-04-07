@@ -538,6 +538,14 @@
       user-select: none;
     }
 
+    .about-profile-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
     .about-img-badge {
       position: absolute;
       bottom: 24px;
@@ -754,6 +762,15 @@
       font-family: var(--font-mono);
       font-size: 12px;
       color: var(--accent);
+      opacity: 0;
+      transform: translateY(4px);
+      transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+
+    .skill-card:hover .skill-pct,
+    .skill-card.skills-reveal .skill-pct {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .skill-bar-track {
@@ -761,6 +778,13 @@
       background: rgba(255,255,255,0.06);
       border-radius: 4px;
       overflow: hidden;
+      opacity: 0.35;
+      transition: opacity 0.25s ease;
+    }
+
+    .skill-card:hover .skill-bar-track,
+    .skill-card.skills-reveal .skill-bar-track {
+      opacity: 1;
     }
 
     .skill-bar-fill {
@@ -1516,7 +1540,7 @@
             <div class="about-corner-inner">Full<br>Stack</div>
           </div>
           <div class="about-img-box">
-            <div class="about-img-placeholder">BL</div>
+            <img src="Imagens/Perfil/perfil.jpeg" alt="Foto de perfil de Bruno Leão" class="about-profile-img" />
           </div>
           <div class="about-img-badge">
             <div class="about-img-badge-num">100%</div>
@@ -2070,12 +2094,6 @@
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
-          // Animate skill bars when visible
-          const bars = entry.target.querySelectorAll('.skill-bar-fill');
-          bars.forEach(bar => {
-            const target = bar.getAttribute('data-width');
-            setTimeout(() => { bar.style.width = target + '%'; }, 200);
-          });
           revealObserver.unobserve(entry.target);
         }
       });
@@ -2083,21 +2101,34 @@
 
     revealEls.forEach(el => revealObserver.observe(el));
 
-    /* ---- SKILL BARS — global trigger ---- */
-    const skillBarObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const bars = entry.target.querySelectorAll('.skill-bar-fill');
-          bars.forEach(bar => {
-            const target = bar.getAttribute('data-width');
-            setTimeout(() => { bar.style.width = target + '%'; }, 300);
-          });
-          skillBarObserver.unobserve(entry.target);
+    /* ---- SKILL BARS — reveal on hover or click ---- */
+    function setSkillCardState(card, show) {
+      card.classList.toggle('skills-reveal', show);
+      const bars = card.querySelectorAll('.skill-bar-fill');
+      bars.forEach(bar => {
+        const target = bar.getAttribute('data-width') || '0';
+        bar.style.width = show ? `${target}%` : '0%';
+      });
+    }
+
+    document.querySelectorAll('.skill-card').forEach(card => {
+      setSkillCardState(card, false);
+
+      card.addEventListener('mouseenter', () => {
+        setSkillCardState(card, true);
+      });
+
+      card.addEventListener('mouseleave', () => {
+        if (!card.classList.contains('skills-locked')) {
+          setSkillCardState(card, false);
         }
       });
-    }, { threshold: 0.2 });
 
-    document.querySelectorAll('.skill-card').forEach(card => skillBarObserver.observe(card));
+      card.addEventListener('click', () => {
+        const isLocked = card.classList.toggle('skills-locked');
+        setSkillCardState(card, isLocked || card.matches(':hover'));
+      });
+    });
 
     /* ---- HERO CANVAS (Particle Network) ---- */
     (function() {
