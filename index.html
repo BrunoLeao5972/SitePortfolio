@@ -4,17 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bruno Leão — Desenvolvedor & Empreendedor</title>
+  <link rel="icon" type="image/png" href="C:\Projetos\Site-Portfolio\Imagens\Icones\favicon.ico">
   <meta name="description" content="Bruno Leão — Desenvolvedor de software especializado em sistemas comerciais, automação, CRM e soluções empresariais." />
-
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Sora:wght@600;700;800&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <style>
-    /* ==============================
-       RESET & CSS VARIAVEIS
-    ============================== */
     *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
@@ -78,9 +74,6 @@
       max-width: 100%;
     }
 
-    /* ==============================
-       NOISE TEXTURE OVERLAY
-    ============================== */
     body::before {
       content: '';
       position: fixed;
@@ -91,9 +84,6 @@
       opacity: 0.4;
     }
 
-    /* ==============================
-       UTEIS
-    ============================== */
     .container {
       max-width: 1180px;
       margin: 0 auto;
@@ -186,7 +176,6 @@
       transform: translateY(-2px);
     }
 
-    /* Scroll animation */
     .reveal {
       opacity: 0;
       transform: translateY(32px);
@@ -203,9 +192,6 @@
     .reveal-delay-3 { transition-delay: 0.3s; }
     .reveal-delay-4 { transition-delay: 0.4s; }
 
-    /* ==============================
-       NAVBAR
-    ============================== */
     #navbar {
       position: fixed;
       top: 0;
@@ -310,7 +296,6 @@
       transition: var(--transition);
     }
 
-    /* Mobile menu */
     .mobile-menu {
       display: none;
       position: fixed;
@@ -352,9 +337,6 @@
       cursor: pointer;
     }
 
-    /* ==============================
-       HERO
-    ============================== */
     #hero {
       min-height: 100vh;
       min-height: 100svh;
@@ -371,7 +353,6 @@
       z-index: 0;
     }
 
-    /* Grid background */
     #hero::after {
       content: '';
       position: absolute;
@@ -479,7 +460,6 @@
       to   { opacity: 1; transform: translateY(0); }
     }
 
-    /* Stats row below hero */
     .hero-stats {
       display: flex;
       gap: 48px;
@@ -507,9 +487,6 @@
       margin-top: 4px;
     }
 
-    /* ==============================
-       ABOUT
-    ============================== */
     #about {
       background: var(--bg-1);
     }
@@ -677,9 +654,6 @@
       margin-top: 4px;
     }
 
-    /* ==============================
-       SKILLS
-    ============================== */
     #skills {
       background: var(--bg-0);
     }
@@ -804,7 +778,6 @@
       transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    /* Tech pills */
     .tech-pills {
       display: flex;
       flex-wrap: wrap;
@@ -822,9 +795,6 @@
       padding: 4px 12px;
     }
 
-    /* ==============================
-       PROJECTS
-    ============================== */
     #projects {
       background: var(--bg-1);
     }
@@ -839,7 +809,6 @@
       gap: 24px;
     }
 
-    /* Feature card */
     .project-card {
       background: var(--bg-2);
       border: 1px solid var(--border-dim);
@@ -886,7 +855,6 @@
       justify-content: center;
     }
 
-    /* Individual project color themes */
     .project-card[data-color="emerald"] .project-visual-bg {
       background: radial-gradient(ellipse at 30% 50%, rgba(0,229,160,0.2) 0%, transparent 60%),
                   radial-gradient(ellipse at 70% 30%, rgba(124,111,255,0.15) 0%, transparent 60%),
@@ -919,7 +887,6 @@
 
     .project-card.featured .project-visual-icon { font-size: 96px; }
 
-    /* Grid lines decoration */
     .project-grid-deco {
       position: absolute;
       inset: 0;
@@ -1007,9 +974,6 @@
       background: var(--accent-dim);
     }
 
-    /* ==============================
-       SERVICES
-    ============================== */
     #services {
       background: var(--bg-0);
       overflow: hidden;
@@ -1106,9 +1070,6 @@
       flex-shrink: 0;
     }
 
-    /* ==============================
-       CONTACT
-    ============================== */
     #contact {
       background: var(--bg-1);
     }
@@ -1187,7 +1148,6 @@
       color: var(--text-1);
     }
 
-    /* Contact form */
     .contact-form {
       background: var(--bg-2);
       border: 1px solid var(--border-dim);
@@ -1260,9 +1220,6 @@
     }
     #form-success p { color: var(--text-2); }
 
-    /* ==============================
-       FOOTER
-    ============================== */
     footer {
       background: var(--bg-0);
       border-top: 1px solid var(--border-dim);
@@ -1348,9 +1305,6 @@
 
     .footer-made span { color: var(--accent); }
 
-    /* ==============================
-       FLOATING WHATSAPP BUTTON
-    ============================== */
     .fab-wa {
       position: fixed;
       bottom: 32px;
@@ -1379,7 +1333,6 @@
       to   { transform: scale(1); opacity: 1; }
     }
 
-    /* Tooltip */
     .fab-wa::after {
       content: 'Fale comigo!';
       position: absolute;
@@ -1399,9 +1352,6 @@
 
     .fab-wa:hover::after { opacity: 1; }
 
-    /* ==============================
-       RESPONSIVE
-    ============================== */
     @media (max-width: 1024px) {
       .container { padding: 0 20px; }
       .about-grid { grid-template-columns: 1fr; gap: 48px; }
@@ -1501,7 +1451,6 @@
       }
     }
 
-    /* Glow pulse on section headings */
     .glow-text {
       text-shadow: 0 0 40px rgba(0,229,160,0.3);
     }
@@ -1518,7 +1467,6 @@
 </head>
 <body>
 
-  <!-- ======= NAVBAR ======= -->
   <nav id="navbar">
     <div class="container">
       <div class="nav-inner">
@@ -1540,7 +1488,6 @@
     </div>
   </nav>
 
-  <!-- Mobile menu -->
   <div class="mobile-menu" id="mobileMenu">
     <button class="mobile-close" id="mobileClose">✕</button>
     <a href="#about" class="menu-link">Sobre</a>
@@ -1550,7 +1497,6 @@
     <a href="#contact" class="menu-link">Contato</a>
   </div>
 
-  <!-- ======= HERO ======= -->
   <section id="hero">
     <canvas id="hero-canvas"></canvas>
     <div class="container">
@@ -1581,15 +1527,15 @@
 
         <div class="hero-stats">
           <div>
-            <div class="hero-stat-num">2<span>+</span></div>
+            <div class="hero-stat-num">4<span>+</span></div>
             <div class="hero-stat-label">Anos desenvolvendo</div>
           </div>
           <div>
-            <div class="hero-stat-num">5<span>+</span></div>
+            <div class="hero-stat-num">15<span>+</span></div>
             <div class="hero-stat-label">Projetos entregues</div>
           </div>
           <div>
-            <div class="hero-stat-num">3<span>+</span></div>
+            <div class="hero-stat-num">10<span>+</span></div>
             <div class="hero-stat-label">Clientes atendidos</div>
           </div>
           <div>
@@ -1608,7 +1554,6 @@
     </div>
   </section>
 
-  <!-- ======= ABOUT ======= -->
   <section id="about" class="section">
     <div class="container">
       <div class="about-grid">
@@ -1671,7 +1616,6 @@
     </div>
   </section>
 
-  <!-- ======= SKILLS ======= -->
   <section id="skills" class="section">
     <div class="container">
       <div class="skills-header">
@@ -1686,7 +1630,6 @@
 
       <div class="skills-categories">
 
-        <!-- Backend -->
         <div class="skill-card reveal">
           <div class="skill-card-icon">⚙️</div>
           <div class="skill-card-title">Backend & APIs</div>
@@ -1708,7 +1651,6 @@
           </div>
         </div>
 
-        <!-- Frontend -->
         <div class="skill-card reveal reveal-delay-1">
           <div class="skill-card-icon">🖥️</div>
           <div class="skill-card-title">Frontend & UI</div>
@@ -1730,7 +1672,6 @@
           </div>
         </div>
 
-        <!-- Banco de dados -->
         <div class="skill-card reveal reveal-delay-2">
           <div class="skill-card-icon">🗄️</div>
           <div class="skill-card-title">Banco de Dados</div>
@@ -1931,7 +1872,6 @@
     </div>
   </section>
 
-  <!-- ======= SERVICES ======= -->
   <section id="services" class="section">
     <div class="container">
       <div style="text-align: center; margin-bottom: 16px;">
@@ -1943,7 +1883,7 @@
       <div class="services-grid">
 
         <div class="service-card reveal">
-          <!-- <div class="service-num">01</div> -->
+
           <span class="service-icon">💻</span>
           <h3 class="service-title">Desenvolvimento de Sistemas</h3>
           <p class="service-desc">Criação de sistemas web e desktop personalizados, do zero à produção, com foco em performance e escalabilidade.</p>
@@ -1956,7 +1896,7 @@
         </div>
 
         <div class="service-card reveal reveal-delay-1">
-          <!-- <div class="service-num">02</div> -->
+
           <span class="service-icon">🔗</span>
           <h3 class="service-title">Automação Comercial</h3>
           <p class="service-desc">Automatize processos repetitivos e integre seus sistemas para ganhar tempo, reduzir erros e escalar operações.</p>
@@ -1969,7 +1909,7 @@
         </div>
 
         <div class="service-card reveal reveal-delay-2">
-          <!-- <div class="service-num">03</div> -->
+
           <span class="service-icon">🧭</span>
           <h3 class="service-title">Consultoria Tech</h3>
           <p class="service-desc">Diagnóstico técnico e estratégico para empresas que querem tomar decisões mais inteligentes com tecnologia.</p>
@@ -1982,7 +1922,7 @@
         </div>
 
         <div class="service-card reveal reveal-delay-3">
-          <!-- <div class="service-num">04</div> -->
+
           <span class="service-icon">📦</span>
           <h3 class="service-title">Soluções Personalizadas</h3>
           <p class="service-desc">KDS para cozinhas, sistemas de licenciamento, totens, quiosques e soluções de hardware + software integradas.</p>
@@ -1998,7 +1938,6 @@
     </div>
   </section>
 
-  <!-- ======= CONTACT ======= -->
   <section id="contact" class="section">
     <div class="container">
       <div class="contact-wrap">
@@ -2015,7 +1954,7 @@
           <div class="contact-channels reveal reveal-delay-2">
 
             <a href="https://contate.me/5585999149141" target="_blank" class="contact-channel channel-wa">
-              <div class="contact-channel-icon">💬</div>
+              <div class="contact-channel-icon"><img src="Imagens/Others/WhatsApp_logo.png" alt="WhatsApp" style="width:24px;height:24px;object-fit:contain;"></div>
               <div>
                 <div class="contact-channel-label">WHATSAPP</div>
                 <div class="contact-channel-value">+55 (85) 99914-9141</div>
@@ -2023,7 +1962,7 @@
             </a>
 
             <a href="mailto:bruno@brunoleao.dev" class="contact-channel channel-email">
-              <div class="contact-channel-icon">✉️</div>
+              <div class="contact-channel-icon"><img src="Imagens/Others/Email_logo.webp" alt="Email" style="width:24px;height:24px;object-fit:contain;"></div>
               <div>
                 <div class="contact-channel-label">E-MAIL</div>
                 <div class="contact-channel-value">brunoinfomais@gmail.com</div>
@@ -2031,7 +1970,7 @@
             </a>
 
             <a href="https://www.linkedin.com/in/bruno-leao--/" target="_blank" class="contact-channel channel-li">
-              <div class="contact-channel-icon">💼</div>
+              <div class="contact-channel-icon"><img src="Imagens/Others/LinkedIn_logo.png" alt="LinkedIn" style="width:24px;height:24px;object-fit:contain;"></div>
               <div>
                 <div class="contact-channel-label">LINKEDIN</div>
                 <div class="contact-channel-value">https://www.linkedin.com/in/bruno-leao--/</div>
@@ -2039,7 +1978,7 @@
             </a>
 
             <a href="https://github.com/BrunoLeao5972" target="_blank" class="contact-channel channel-gh">
-              <div class="contact-channel-icon">🐙</div>
+              <div class="contact-channel-icon"><img src="Imagens/Others/github_logo.webp" alt="GitHub" style="width:24px;height:24px;object-fit:contain;"></div>
               <div>
                 <div class="contact-channel-label">GITHUB</div>
                 <div class="contact-channel-value">https://github.com/BrunoLeao5972</div>
@@ -2090,7 +2029,6 @@
     </div>
   </section>
 
-  <!-- ======= FOOTER ======= -->
   <footer>
     <div class="container">
       <div class="footer-inner">
@@ -2109,37 +2047,30 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <div class="footer-copy">© 2025 Bruno Leão. Todos os direitos reservados.</div>
-        <div class="footer-made">"Impossível é uma palavra muito grande, que gente pequena usa pra tentar nos oprimir" <span>🤘🏼</span></div>
+        <div class="footer-copy">© 2026 Bruno Leão. Todos os direitos reservados.</div>
+        <div class="footer-made">❝Impossível é uma palavra muito grande, que gente pequena usa pra tentar nos oprimir❞ <span>🤘🏼</span></div>
       </div>
     </div>
   </footer>
 
-  <!-- Floating WhatsApp -->
   <a href="https://contate.me/5585999149141" target="_blank" class="fab-wa" title="WhatsApp">
     <svg width="26" height="26" viewBox="0 0 24 24" fill="white">
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
     </svg>
   </a>
 
-  <!-- ==============================
-       JAVASCRIPT
-  ============================== -->
   <script>
-    /* ---- NAV SCROLL EFFECT ---- */
     const navbar = document.getElementById('navbar');
     const navLinks = document.querySelectorAll('.nav-links a');
     const sections = document.querySelectorAll('section[id]');
 
     window.addEventListener('scroll', () => {
-      // Sticky nav
       if (window.scrollY > 60) {
         navbar.classList.add('scrolled');
       } else {
         navbar.classList.remove('scrolled');
       }
 
-      // Active nav link
       let current = '';
       sections.forEach(section => {
         if (window.scrollY >= section.offsetTop - 120) {
@@ -2154,7 +2085,6 @@
       });
     });
 
-    /* ---- MOBILE MENU ---- */
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
     const mobileClose = document.getElementById('mobileClose');
@@ -2166,7 +2096,6 @@
       link.addEventListener('click', () => mobileMenu.classList.remove('open'));
     });
 
-    /* ---- SCROLL REVEAL ---- */
     const revealEls = document.querySelectorAll('.reveal');
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -2179,7 +2108,6 @@
 
     revealEls.forEach(el => revealObserver.observe(el));
 
-    /* ---- SKILL BARS — reveal on hover or click ---- */
     function setSkillCardState(card, show) {
       card.classList.toggle('skills-reveal', show);
       const bars = card.querySelectorAll('.skill-bar-fill');
@@ -2208,7 +2136,6 @@
       });
     });
 
-    /* ---- HERO CANVAS (Particle Network) ---- */
     (function() {
       const canvas = document.getElementById('hero-canvas');
       const ctx = canvas.getContext('2d');
@@ -2248,14 +2175,12 @@
 
         particles.forEach(p => {
           p.update();
-          // dot
           ctx.beginPath();
           ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
           ctx.fillStyle = `rgba(0,229,160,${p.opacity})`;
           ctx.fill();
         });
 
-        // connections
         for (let i = 0; i < particles.length; i++) {
           for (let j = i + 1; j < particles.length; j++) {
             const dx = particles[i].x - particles[j].x;
@@ -2282,10 +2207,6 @@
       draw();
     })();
 
-    /* ---- TYPEWRITER (optional subtle effect on hero sub) ---- */
-    // Already static for readability, but could be animated
-
-    /* ---- CONTACT FORM → WHATSAPP ---- */
     function sendWhatsApp() {
       const name = document.getElementById('inp-name').value.trim();
       const phone = document.getElementById('inp-phone').value.trim();
@@ -2301,7 +2222,7 @@
       const text = `Olá Bruno! Meu nome é *${name}*.\n\n📋 *Assunto:* ${subject || 'Contato pelo site'}\n📱 *Telefone:* ${phone || 'não informado'}\n📧 *E-mail:* ${email || 'não informado'}\n\n💬 *Mensagem:*\n${msg}`;
 
       const encoded = encodeURIComponent(text);
-      // Show success state
+
       document.getElementById('contactForm').style.display = 'none';
       document.getElementById('form-success').style.display = 'block';
 
@@ -2310,7 +2231,6 @@
       }, 800);
     }
 
-    /* ---- SMOOTH ACTIVE SECTION HIGHLIGHT ---- */
     document.querySelectorAll('a[href^="#"]').forEach(link => {
       link.addEventListener('click', e => {
         const id = link.getAttribute('href');
@@ -2324,7 +2244,6 @@
       });
     });
 
-    /* ---- CUSTOM CURSOR (desktop) ---- */
     if (window.matchMedia('(hover: hover)').matches) {
       const cursor = document.createElement('div');
       cursor.style.cssText = `
@@ -2354,7 +2273,6 @@
         cursor.style.top = my + 'px';
       });
 
-      // Smooth ring follow
       (function animRing() {
         rx += (mx - rx) * 0.12;
         ry += (my - ry) * 0.12;
@@ -2363,7 +2281,6 @@
         requestAnimationFrame(animRing);
       })();
 
-      // Hover expand
       document.querySelectorAll('a, button, .btn, .project-card, .service-card, .skill-card').forEach(el => {
         el.addEventListener('mouseenter', () => {
           cursor.style.width = '14px';
