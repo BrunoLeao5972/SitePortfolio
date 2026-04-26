@@ -741,6 +741,18 @@
       font-weight: 500;
     }
 
+    .skill-name a {
+      color: var(--text-2);
+      text-decoration: none;
+      transition: var(--transition);
+      border-bottom: 1px dashed var(--accent);
+    }
+
+    .skill-name a:hover {
+      color: var(--accent);
+      border-bottom: 1px solid var(--accent);
+    }
+
     .skill-pct {
       font-family: var(--font-mono);
       font-size: 12px;
@@ -836,6 +848,10 @@
 
     .project-card.half {
       grid-column: span 6;
+    }
+
+    .project-card.full {
+      grid-column: span 12;
     }
 
     .project-card-visual {
@@ -1634,11 +1650,11 @@
           <div class="skill-card-icon">⚙️</div>
           <div class="skill-card-title">Backend & APIs</div>
           <div class="skill-item">
-            <div class="skill-row"><span class="skill-name">Javascript</span><span class="skill-pct">80%</span></div>
+            <div class="skill-row"><span class="skill-name"><a href="https://www.devmedia.com.br/certificado/tecnologia/javascript/bruno-silva-saraiva-leao" target="_blank">Javascript</a></span><span class="skill-pct">80%</span></div>
             <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
           </div>
           <div class="skill-item">
-            <div class="skill-row"><span class="skill-name">Node.js / Express</span><span class="skill-pct">75%</span></div>
+            <div class="skill-row"><span class="skill-name"><a href="https://www.devmedia.com.br/certificado/tecnologia/node-js/bruno-silva-saraiva-leao" target="_blank">Node.js / Express</a></span><span class="skill-pct">75%</span></div>
             <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div>
           </div>
           <div class="skill-item">
@@ -1764,9 +1780,7 @@
       </div>
 
       <div class="projects-grid">
-
-        <!-- LeadAtlas CRM - Featured -->
-        <div class="project-card featured reveal" data-color="emerald">
+        <div class="project-card half reveal" data-color="emerald">
           <div class="project-card-visual">
             <div class="project-visual-bg">
               <div class="project-grid-deco"></div>
@@ -1791,7 +1805,7 @@
           </div>
         </div>
 
-        <div class="project-card normal reveal reveal-delay-1" data-color="amber">
+        <div class="project-card half reveal reveal-delay-1" data-color="amber">
           <div class="project-card-visual">
             <div class="project-visual-bg">
               <div class="project-grid-deco"></div>
@@ -1826,7 +1840,8 @@
           <div class="project-card-body">
             <div class="project-tag">SaaS • Gestão Empresarial</div>
             <h3 class="project-title">Sistema de Gestão Hospitalar</h3>
-            <p class="project-desc">Plataforma de gerenciamento de clínicas e hospitais</p>
+            <p class="project-desc">Sistema de gestão para clínicas e hospitais que centraliza agendamentos, prontuários, financeiro e controle de estoque, otimizando processos, reduzindo erros e melhorando a eficiência no atendimento aos pacientes.
+</p>
             <div class="project-footer">
               <div class="project-stack">
                 <span class="project-stack-tag">JavaScript</span>
@@ -1858,6 +1873,56 @@
                 <span class="project-stack-tag">JAVA</span>
                 <span class="project-stack-tag">Angular 8</span>
                 <span class="project-stack-tag">Microsoft SQL Server</span>
+              </div>
+              <a href="#contact" class="project-link" title="Ver detalhes">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+         <div class="project-card half reveal reveal-delay-2" data-color="purple">
+          <div class="project-card-visual">
+            <div class="project-visual-bg">
+              <div class="project-grid-deco"></div>
+              <div class="project-visual-icon">🖱️</div>
+            </div>
+          </div>
+          <div class="project-card-body">
+            <div class="project-tag">UniClick • e-Comerce</div>
+            <h3 class="project-title">UniClick E-comerce</h3>
+            <p class="project-desc">UniClick é uma plataforma de marketplace desenvolvida para centralizar múltiplas lojas em um único ambiente digital. O sistema permite que cada vendedor tenha sua própria página personalizada dentro da plataforma, facilitando a gestão de produtos, pedidos e compartilhamento de sua loja por meio de links exclusivos. Focado em escalabilidade e usabilidade, o UniClick oferece uma experiência moderna, prática e eficiente tanto para lojistas quanto para clientes.</p>
+            <div class="project-footer">
+              <div class="project-stack">
+                <span class="project-stack-tag">JavaScript</span>
+                <span class="project-stack-tag">Node.JS</span>
+                <span class="project-stack-tag">MSSQL</span>
+                <span class="project-stack-tag">React</span>
+              </div>
+              <a href="#contact" class="project-link" title="Ver detalhes">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card half reveal reveal-delay-3" data-color="emerald">
+          <div class="project-card-visual">
+            <div class="project-visual-bg">
+              <div class="project-grid-deco"></div>
+              <div class="project-visual-icon">💪</div>
+            </div>
+          </div>
+          <div class="project-card-body">
+            <div class="project-tag">Fit-SaaS • Fitness</div>
+            <h3 class="project-title">Fit-SaaS • Gestão para Personal Trainers</h3>
+            <p class="project-desc">Plataforma completa para personal trainers gerenciarem seus alunos, treinos e acompanhamento de evolução. Sistema de agendamento de sessões, controle de pagamentos, envio de treinos personalizados e acompanhamento de medidas e resultados.</p>
+            <div class="project-footer">
+              <div class="project-stack">
+                <span class="project-stack-tag">React</span>
+                <span class="project-stack-tag">Node.js</span>
+                <span class="project-stack-tag">MongoDB</span>
+                <span class="project-stack-tag">TypeScript</span>
               </div>
               <a href="#contact" class="project-link" title="Ver detalhes">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -1923,12 +1988,13 @@
 
           <span class="service-icon">📦</span>
           <h3 class="service-title">Soluções Personalizadas</h3>
-          <p class="service-desc">KDS para cozinhas, sistemas de licenciamento, totens, quiosques e soluções de hardware + software integradas.</p>
+          <p class="service-desc">KDS para cozinha, sistemas para clínicas, totens, quiosques e soluções de hardware + software integradas.</p>
           <div class="service-features">
-            <div class="service-feature">Kitchen Display System</div>
-            <div class="service-feature">Licenciamento de software</div>
-            <div class="service-feature">Sistemas embarcados</div>
-            <div class="service-feature">Soluções para varejo</div>
+            <div class="service-feature">KDS | Kitchen Display System</div>
+            <div class="service-feature">Lead Atlas | Funil de vendas</div>
+            <div class="service-feature">Gestão escolar</div>
+            <div class="service-feature">Automação de processos</div>
+            <div class="service-feature">Equipamentos para seu negócio</div>
           </div>
         </div>
 
